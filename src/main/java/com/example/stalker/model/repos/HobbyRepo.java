@@ -1,6 +1,6 @@
-package com.example.stalker.repos;
+package com.example.stalker.model.repos;
 
-import com.example.stalker.model.Hobby;
+import com.example.stalker.model.entity.Hobby;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

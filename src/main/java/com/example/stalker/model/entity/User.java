@@ -1,4 +1,4 @@
-package com.example.stalker.model;
+package com.example.stalker.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

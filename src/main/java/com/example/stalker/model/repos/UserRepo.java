@@ -1,6 +1,6 @@
-package com.example.stalker.repos;
+package com.example.stalker.model.repos;
 
-import com.example.stalker.model.User;
+import com.example.stalker.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
