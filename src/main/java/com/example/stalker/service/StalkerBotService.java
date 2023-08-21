@@ -5,6 +5,12 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+/*
+ * @author SteklotaraBlizz
+ *
+ * Service to match api with telegram api
+ *
+ */
 @Component
 public class StalkerBotService extends TelegramLongPollingBot {
 

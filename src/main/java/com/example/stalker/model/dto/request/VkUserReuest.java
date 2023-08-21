@@ -3,6 +3,12 @@ package com.example.stalker.model.dto.request;
 import lombok.Builder;
 import lombok.Data;
 
+/*
+ * @author SteklotaraBlizz
+ *
+ * Request form of user to vk
+ *
+ */
 @Builder
 @Data
 public class VkUserReuest {

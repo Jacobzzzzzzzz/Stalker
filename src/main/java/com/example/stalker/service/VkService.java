@@ -5,6 +5,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/*
+ * @author SteklotaraBlizz
+ *
+ * Vk service to get smth from vk
+ *
+ */
 @Component
 public interface VkService {
     VkUserDto getById(Long id);
