@@ -11,7 +11,7 @@ import lombok.Data;
  */
 @Builder
 @Data
-public class VkUserReuest {
+public class VkUserRequest {
     private long id;
     private String username;
     private String fio;
