@@ -1,0 +1,19 @@
+package com.example.stalker.model.dto.response;
+
+import com.example.stalker.model.entity.Hobby;
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Builder
+@Data
+public class VkUserDto {
+
+    private Long id;
+    private String username;
+    private String fio;
+    private List<Hobby> userHobby;
+
+    //etc. (work in progress)
+}
