@@ -12,9 +12,10 @@ import java.util.List;
  * Data transfer object suitable to user from vk
  *
  */
-@Builder
+
 @Data
-public class VkUserDto {
+@Builder
+public class UserDto {
 
     private Long id;
     private String username;
