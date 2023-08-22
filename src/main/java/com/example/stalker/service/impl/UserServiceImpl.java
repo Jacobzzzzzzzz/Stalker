@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getByFio(String fio) {
         List<User> tempUser = userRepo.findByFio(fio).stream().toList();
-
         /*List<UserDto> dtoList = tempUser.stream()
                 .map(user -> transform(tempUser.get())
                 .toList();*/
