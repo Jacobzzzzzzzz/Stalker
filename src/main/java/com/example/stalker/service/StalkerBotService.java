@@ -34,7 +34,7 @@ public class StalkerBotService extends TelegramLongPollingBot {
         }
         Long id = update.getMessage().getChatId();
         String answer = "Добро пожаловать в StalkerBot! В настоящее время функционал бота находится в" +
-                        "разработке, stay tuned!";
+                "разработке, stay tuned!";
         try {
             sendMessage(id, answer);
         } catch (TelegramApiException e) {
