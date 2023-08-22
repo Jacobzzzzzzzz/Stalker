@@ -1,10 +1,13 @@
 package com.example.stalker.service;
 
 import com.example.stalker.config.StalkerConfig;
+import com.example.stalker.exception.EmptyMessageException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 /*
  * @author SteklotaraBlizz
@@ -26,6 +29,30 @@ public class StalkerBotService extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        //todo
+        if(!update.hasMessage() || !update.getMessage().hasText()){
+            throw new EmptyMessageException("Wrong message");
+        }
+        Long id = update.getMessage().getChatId();
+        String answer = "Добро пожаловать в StalkerBot! В настоящее время функционал бота находится в" +
+                        "разработке, stay tuned!";
+        try {
+            sendMessage(id, answer);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void sendMessage(long id, String text) throws TelegramApiException{
+        SendMessage message = new SendMessage();
+
+        message.setChatId(String.valueOf(id));
+        message.setText(text);
+
+        try{
+            execute(message);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
