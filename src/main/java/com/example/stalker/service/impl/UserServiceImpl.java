@@ -14,59 +14,5 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepo userRepo;
-    @Override
-    public UserDto getById(Long id) {
-        List<User> tempUser = userRepo.findById(id).stream().toList();
-        //return transform(tempUser.get());
-        return null;
-    }
 
-    @Override
-    public UserDto getByUsername(String username) {
-        List<User> tempUser = userRepo.findByUsername(username).stream().toList();
-        //return transform(tempUser.get());
-        return null;
-    }
-
-    @Override
-    public List<UserDto> getByFio(String fio) {
-        List<User> tempUser = userRepo.findByFio(fio).stream().toList();
-        /*List<UserDto> dtoList = tempUser.stream()
-                .map(user -> transform(tempUser.get())
-                .toList();*/
-        return null;
-    }
-
-    @Override
-    public List<UserDto> getAll() {
-        List<User> tempUser = userRepo.findAll().stream().toList();
-
-        /*List<UserDto> dtoList = tempUser.stream()
-                .map(user -> transform(tempUser.get())
-                .toList();*/
-        return null;
-    }
-
-    @Override
-    public List<Hobby> getUserHobby(UserDto user) {
-        //Хз
-        return user.getUserHobby();
-    }
-
-    @Override
-    public void Delete(Long id) {
-        if(!userRepo.existsById(id)){
-            //throw new Exception(String.format("User not found via id"));
-        }
-        userRepo.deleteById(id);
-    }
-
-    private UserDto transform(User user) {
-        return UserDto.builder()
-                .id(user.getId())
-                .username(user.getUsername())
-                .fio(user.getName())
-                //.userHobby()
-                .build();
-    }
 }

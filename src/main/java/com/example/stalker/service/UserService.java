@@ -16,11 +16,5 @@ import java.util.List;
  */
 @Component
 public interface UserService {
-    UserDto getById(Long id);
-    UserDto getByUsername(String username);
-    List<UserDto> getByFio(String fio);
 
-    List<UserDto> getAll();
-    List<Hobby> getUserHobby(UserDto user);
-    void Delete(Long id);
 }

@@ -22,15 +22,6 @@ public class UserController {
 
     private final UserService userService;
 
-    @GetMapping
-    public ResponseEntity<List<UserDto>> getAllUsers() {
-        return ResponseEntity.ok(userService.getAll());
-    }
-
-    @GetMapping
-    public ResponseEntity<List<Hobby>> getUserHobbiesById(Long id){
-        return ResponseEntity.ok(userService.getUserHobby(id));
-    }
 
     //todo
 }
