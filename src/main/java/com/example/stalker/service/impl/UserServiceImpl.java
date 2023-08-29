@@ -13,6 +13,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-    private final UserRepo userRepo;
+    //private final UserRepo userRepo;
 
 }
