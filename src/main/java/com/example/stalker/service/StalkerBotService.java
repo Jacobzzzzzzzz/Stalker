@@ -32,10 +32,7 @@ public class StalkerBotService extends TelegramLongPollingBot {
             throw new EmptyMessageException("Wrong message");
         }
         Long id = update.getMessage().getChatId();
-        String answer = "Добро пожаловать в StalkerBot! В настоящее время функционал бота находится в" +
-                "разработке, stay tuned!";
-
-        sendMessage(id, answer);
+        commandSelector(id, update.getMessage().getText());
     }
 
     private void sendMessage(long id, String text) {
@@ -50,5 +47,26 @@ public class StalkerBotService extends TelegramLongPollingBot {
             //throw new RuntimeException(e);
         }
 
+    }
+
+    private void commandSelector(Long id, String command){
+        String answer;
+        switch(command){
+
+            case "/start":
+                answer = "Добро пожаловать в StalkerBot! Сами вы его выбрали, или его выбрали за вас,"+
+                         "это лучший из всех имеющихся бот для слежки за людьми и сравнением их с собой любимым:). " +
+                         "Введите /help, чтобы перейти к списку команд";
+                break;
+            case "/help":
+                answer = "/stalk - посмотреть, чем увлекается человек (по его id) \n" +
+                         "/compare - узнать совпадение ваших интересов с интересами другого человека (по его id) \n" +
+                         "Остальной функционал в разработке";
+                break;
+            default:
+                answer = "Не знаю такой команды( \n" + "Попробуй снова";
+                break;
+        }
+        sendMessage(id, answer);
     }
 }
