@@ -19,14 +19,13 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @RequiredArgsConstructor
 public class StalkerBotService extends TelegramLongPollingBot {
 
-    final StalkerConfig config;
+    private final StalkerConfig config;
 
     @Override
     public String getBotUsername() { return config.getBotName(); }
 
     @Override
     public String getBotToken() { return config.getBotToken(); }
-
     @Override
     public void onUpdateReceived(Update update) {
         if(!update.hasMessage() || !update.getMessage().hasText()){
@@ -35,14 +34,11 @@ public class StalkerBotService extends TelegramLongPollingBot {
         Long id = update.getMessage().getChatId();
         String answer = "Добро пожаловать в StalkerBot! В настоящее время функционал бота находится в" +
                 "разработке, stay tuned!";
-        try {
-            sendMessage(id, answer);
-        } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
-        }
+
+        sendMessage(id, answer);
     }
 
-    private void sendMessage(long id, String text) throws TelegramApiException{
+    private void sendMessage(long id, String text) {
         SendMessage message = new SendMessage();
 
         message.setChatId(String.valueOf(id));
@@ -51,7 +47,7 @@ public class StalkerBotService extends TelegramLongPollingBot {
         try{
             execute(message);
         } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e);
         }
 
     }
