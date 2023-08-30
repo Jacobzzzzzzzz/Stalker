@@ -7,7 +7,7 @@ spring:
 
   datasource:
     username: postgres
-    password: admin
+    password: turing
     url: jdbc:postgresql://localhost:5432/stalker
     driver-class-name: org.postgresql.Driver
   jpa:

@@ -6,7 +6,7 @@ import lombok.Data;
 
 import java.util.List;
 
-/*
+/**
  * @author SteklotaraBlizz
  *
  * Data transfer object suitable to user from vk

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/*
+/**
 * @author SteklotaraBlizz
 *
 * Vk controller to check vk.api request status

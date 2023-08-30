@@ -3,16 +3,53 @@ package com.example.stalker.model.entity;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * @author SteklotaraBlizz
+ *
+ * Vk groups tags
+ */
+
 @RequiredArgsConstructor
 @Getter
 public enum HobbyTypeEnum
 {
-    MUSIC("ROCK", "POP", "RAP", "METAL", "FOLK", "INDI", "CLASSICAL"),
-    SPORT("GYM", "FOOTBALL", "BASKETBALL", "CYCLE", "MOTORSPORT", "HOKKEY", "SKII", "VOLLEYBALL");
 
-    //Я хз почему, но идея даже с RequiredArgsConstructor ругается на отсутствие конструктора
-    HobbyTypeEnum(String rock, String pop, String rap, String metal, String folk, String indi, String classical) {}
-
-    HobbyTypeEnum(String gym, String football, String basketball, String cycle, String motorsport, String hokkey, String skii, String volleyball) {
-    }
+    HUMOR,
+    CINEMA,
+    NEWS,
+    VIDEO_GAMES,
+    ENTERTAINMENTS,
+    IT,
+    ACCESSORIES,
+    NEW_THINGS,
+    GOODS,
+    COOKING,
+    ALCOHOL,
+    RELAX,
+    PSYCHOLOGY,
+    ACQUAINTANCES,
+    SOCIETY,
+    SCIENCE,
+    FOREIGN_LANGUAGES,
+    SPORT,
+    FIGHTING_ART,
+    FOOTBALL,
+    HEALTHY_LIFESTYLE,
+    GROOMING,
+    MALE_HEALTH,
+    FEMALE_HEALTH,
+    CREATIVITY,
+    DESIGN,
+    CULTURE,
+    LITERATURE,
+    PHOTOGRAPHY,
+    MUSIC,
+    BLOG,
+    BUSINESS,
+    TOURISM,
+    URBAN_TOURISM,
+    FRIENDS,
+    POLITICS,
+    СCONSTRUCTION,
+    CARS;
 }

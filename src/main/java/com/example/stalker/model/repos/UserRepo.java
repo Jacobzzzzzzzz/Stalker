@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-/*
+/**
 * @author SteklotaraBlizz
 *
 * Repository to contain users

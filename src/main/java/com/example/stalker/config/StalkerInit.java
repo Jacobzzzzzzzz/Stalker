@@ -9,6 +9,11 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
+/**
+ * @author SteklotaraBlizz
+ *
+ * Telegram bot initialize
+ */
 @Component
 public class StalkerInit {
 

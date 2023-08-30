@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/*
+/**
  * @author SteklotaraBlizz
  *
  * Vk service to get smth from vk
