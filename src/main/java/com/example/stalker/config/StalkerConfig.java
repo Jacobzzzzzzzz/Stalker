@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
  */
 @Configuration
 @Data
-@PropertySource("appbot.properties")
+@PropertySource("../../../../../resources/appbot.properties")
 public class StalkerConfig {
 
     @Value("${bot.name}")
