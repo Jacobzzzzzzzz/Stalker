@@ -1,4 +1,4 @@
-package com.example.stalker.service;
+package com.example.stalker.service.User;
 
 import com.example.stalker.model.dto.response.UserDto;
 
@@ -16,5 +16,5 @@ import java.util.List;
  */
 @Component
 public interface UserService {
-
+    public User getById(String id);
 }
