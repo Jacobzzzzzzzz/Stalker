@@ -17,4 +17,5 @@ import java.util.List;
 @Component
 public interface UserService {
     public User getById(String id);
+    public void save();
 }

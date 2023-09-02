@@ -17,7 +17,7 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
-public class User implements UserDetails {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,51 +25,11 @@ public class User implements UserDetails {
 
     @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String password;
     @Column(nullable = false)
     private boolean sex;
     @Column(nullable = false)
     private String city;
     @Column(nullable = false)
     private byte age;
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("USER"));
-    }
-
-    @Override
-    public String getUsername() {
-        return email;
-    }
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
 
 }
