@@ -1,9 +1,9 @@
 package com.example.stalker.service.User;
 
-import com.example.stalker.model.dto.response.UserDto;
-
-import com.example.stalker.model.entity.Hobby;
 import com.example.stalker.model.entity.User;
+import com.vk.api.sdk.actions.Users;
+import com.vk.api.sdk.exceptions.ApiException;
+import com.vk.api.sdk.exceptions.ClientException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,5 +17,6 @@ import java.util.List;
 @Component
 public interface UserService {
     public User getById(String id);
+    public User getUser() throws ClientException, ApiException;
     public void save();
 }
