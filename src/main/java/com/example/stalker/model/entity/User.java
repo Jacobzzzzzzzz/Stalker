@@ -31,5 +31,7 @@ public class User {
     private String city;
     @Column(nullable = false)
     private byte age;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "follower")
+    private List<Hobby> subscriptions;
 
 }

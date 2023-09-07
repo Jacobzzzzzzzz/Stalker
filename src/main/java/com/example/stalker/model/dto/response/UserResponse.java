@@ -15,10 +15,9 @@ import java.util.List;
 
 @Data
 @Builder
-public class UserDto {
+public class UserResponse {
 
     private Long id;
-    private String username;
     private String fio;
     private List<Hobby> userHobby;
 
